@@ -65,6 +65,7 @@ def test_runtime_bundle_is_complete_and_reproducible(
         assert data == (skill.parent / icon).read_bytes()
         assert ElementTree.fromstring(data).tag == "{http://www.w3.org/2000/svg}svg"
     assert "skills/egm-bootstrap/references/worker-return.schema.json" in names
+    assert "skills/egm-bootstrap/references/templates.md" in names
     assert "resources/document_standards/feature-spec-standard.md" in names
     assert "agents/design_critic.md" in names
     assert "docs/codex.md" in names
